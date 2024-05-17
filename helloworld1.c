@@ -1,15 +1,20 @@
 #include <stdio.h>
 
+unsigned int uiSum;
+
 int main()
 {
     printf("Hello, C World!\n");
 
     printf("__STDC_VERSION__ = %ld\n", __STDC_VERSION__);
 
-    int a = 1, b = 2, c = 3;
-    a = 4;
-
-    printf("a + b + c = %d\n", a + b + c);
+    unsigned int uiCtr;
+    uiSum = 0;
+    for(uiCtr = 0; uiCtr < 100; uiCtr++) 
+    {
+        uiSum += uiCtr;
+    }
+    printf("%d\n", uiSum);
     
     return 0;
 }
