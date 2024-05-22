@@ -12,7 +12,7 @@
             "command": "mkdir", 
             "args": [
                 "-p",                                               // 하위 경로에 Debug 와 동일 디렉토리 없을때만 생성하는 mkdir 명령 옵션
-                "Debug"
+                "${fileDirname}/Debug"
             ]
         },
         {
@@ -27,7 +27,7 @@
                 "-Werror",
                 "${file}",                                          // 소스파일
                 "-o",                                               // Output 출력파일 = 실행파일
-                "${workspaceFolder}/Debug/${fileBasenameNoExtension}" // 빌드 결과 파일의 저장 경로와 파일명 형식
+                "${fileDirname}/Debug/${fileBasenameNoExtension}"   // 빌드 결과 파일의 저장 경로와 파일명 형식
 				//, "-std=gnu++11"                                  // (opt) 특정 컴파일러 버전 선택시 지정
             ],
             "options": {
